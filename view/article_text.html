@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arknights</title>
+    <link rel="stylesheet" href="{{BASE}}/static/css/article.css">
+    <script src="{{BASE}}/static/js/jquery_2.1.4_min.js"></script>
+    <script src="{{BASE}}/static/js/fARD.js"></script>
+    <style>
+
+@font-face {
+    font-family: "Source Han Sans CN";
+    src: url({{BASE}}/static/fonts/SourceHanSansSC-Regular.otf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Source Han Sans CN";
+    src: url({{BASE}}/static/fonts/SourceHanSansSC-Bold.otf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Source Han Sans CN";
+    src: url({{BASE}}/static/fonts/SourceHanSansCN-Light.otf);
+    font-weight: 100;
+}
+        .title{
+        background-image: url({{BASE}}/static/img/banner_i.jpg);
+        background-color:rgb(51,51,51);
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    </style>
+</head>
+<body class="bodyscale">
+    <div class="text_main">
+
+        {% autoescape off %}
+        {% for line in obj.text_in_line %}
+
+            {% if line.form == "title" %}
+            <div class="title">
+                <h1>{{ line.content }}</h1>
+            </div>
+            {% elif line.form == "image" %}
+                <img src="{{ line.content }}" alt="" srcset="">
+            {% elif line.form == "p" %}
+                <p>{{ line.content }}</p>
+            {% elif line.form == "br" %}
+                <br>
+            {% endif %}
+
+        {% endfor %}
+        {% endautoescape %}
+        <p class="btm_right">罗德岛蜜饼工坊<br>{{ obj.time }}</p>
+    <script src="{{BASE}}/static/js/article.js"></script>
+</body>
+</html>

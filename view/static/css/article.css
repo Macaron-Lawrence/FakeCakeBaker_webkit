@@ -1,0 +1,116 @@
+html{
+}
+
+
+body{
+    left: 0;
+    top: 0;
+    margin: 0;
+    position:relative;
+    height: 100%;
+    background-color: rgb(180, 180, 180);
+    font-family:"Source Han Sans CN";
+}
+
+.title{
+    margin-top: 3.1%;
+    height: min-content;
+    width: 100%;
+}
+.title h1{
+    color: white;
+    margin: 0;
+    font-weight: 400;
+    font-size: 83.1px;
+    margin-left: 1%;
+    line-height: 148.5px;
+}
+
+.bodyscale{
+    width: 2298px;
+
+}
+
+b{
+    font-weight: 700;
+}
+
+red{
+    color: rgb(177, 67, 51);
+}
+.image_main{
+    position: relative;
+    width: 100%;
+    left: 0;
+}
+
+.image_main img{
+    width: 100%;
+}
+
+.image_main::before{
+    content: "";
+    width: 100%;
+    position: absolute;
+    background:rgba(50, 50, 50, 0.17);
+}
+
+.text_main{
+    top: 0;
+    bottom: 0;
+    position: relative;
+    width: 94.6%;
+    left: 0;
+    margin-left: 2.7%;
+    padding-right: 1%;
+    overflow-y:scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+;
+}
+
+
+.text_main::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+.text_main img{
+    width: 100%;
+    height: auto;
+    margin-top:1.7%;
+    margin-bottom: 0.5%;
+}
+
+.text_main p{
+    margin-bottom: 1.03%;
+    margin-top: 0;
+    font-size: 52px;
+    letter-spacing:0.9px;
+    line-break: anywhere;
+    line-height:120%;
+    font-weight:400;
+}
+
+.text_main span{
+    font-feature-settings:"halt"
+}
+
+.text_main .title{
+    margin-bottom: 0.5%;
+}
+
+
+
+.btm_right{
+    display: block;
+    text-align: right;
+    padding-top: 45px;
+    padding-bottom: 100px;
+}
+
+
+l{
+    font-weight: 100
+}
